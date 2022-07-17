@@ -1,6 +1,6 @@
 import {IMovie} from './Imovie';
 export interface IMovies{
     name: string;
-    poster: string;
+    poster?: string;
     movies: IMovie[];
 }
