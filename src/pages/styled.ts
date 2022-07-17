@@ -1,15 +1,5 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
-    position: relative;
-    background-color: #cccccc;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-`;
-
 export const HeaderWrapper = styled.div`
     display: flex;
     position: relative;
@@ -20,10 +10,10 @@ export const HeaderWrapper = styled.div`
 
 export const MoviesWrapper = styled.div`
     margin: auto;
-    width: 50%;
-    display: grid;
-    grid-template-columns: 20rem 20rem 20rem;
-    grid-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 1rem 2rem;
 `;
 
 export const Navigation = styled.div`
@@ -33,7 +23,15 @@ export const Navigation = styled.div`
 `;
 
 export const Title = styled.div`
+    max-width: 240px;
     font-weight: bold;
+    overflow: visible;
+    white-space: nowrap;
+    & span {
+        margin-left: -100%;
+        margin-right: -100%;
+        text-align: center;
+    }
     & img {
         max-width: 240px;
         height: auto;
