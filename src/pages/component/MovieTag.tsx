@@ -32,12 +32,12 @@ return (
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
-          style: { backgroundColor: 'rgba(0, 0, 0, 0.3)' },
+          style: { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
         }}
       >
         <Fade in={isModalOpened}>
           <ModalContainer>
-            <MovieDetails title={movie.title} trailerKey={trailerKey} />
+            <MovieDetails title={movie.title} trailerKey={trailerKey} rank={movie.vote_average} handleCloseModal={handleCloseModal} overview={movie.overview}/>
           </ModalContainer>
         </Fade>
       </Modal>
@@ -46,7 +46,7 @@ return (
     </Tooltip>
     <Tooltip
     title={movie.vote_average}
-    followCursor={true}
+    placement='top'
     componentsProps={{
         tooltip: {
           sx: {

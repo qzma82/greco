@@ -9,11 +9,13 @@ export const MovieWrapper = styled.div`
     align-items: center;
     & img {
         max-width: 100%;
-        height: auto;
         &:hover {
             transform: scale(1.02);
             cursor: pointer;
         }
+    }
+    > * {
+        margin-top: 55px;
     }
 `;
 
@@ -27,9 +29,9 @@ export const Title = styled.div`
 `;
 
 export const ModalContainer = styled.div`
+    display: flex;
     position: relative;
-    width: 50%;
-    height: 50%;
+    height: 100%;
     justify-content: center;
     align-items: center;
 `;
@@ -37,6 +39,9 @@ export const ModalContainer = styled.div`
 export const DetailsWrapper = styled.div`
     display: flex;
     position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: black;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -44,4 +49,24 @@ export const DetailsWrapper = styled.div`
         width: 420px;
         height: 315px;
     }
+`;
+
+export const Close = styled.div`
+    position:absolute;
+    top:5px;
+    right:5px;
+    cursor: pointer;
+`;
+
+export const Rank = styled.div`
+    position:absolute;
+    top:15px;
+    left:15px;
+    width: 32px;
+    height: 32px;    
+    font-size: 1.2em;
+    font-weight: bold;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 50%;
 `;
